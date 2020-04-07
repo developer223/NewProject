@@ -17,6 +17,8 @@ public class ch5Actity extends AppCompatActivity {
         setContentView(R.layout.layout_ch5);
 
     }
+
+    //添加通知
     public void notification(View view){
         Notification.Builder builder=new Notification.Builder(this);
         //完成通知各种属性的设置
@@ -31,10 +33,12 @@ public class ch5Actity extends AppCompatActivity {
         notificationManager.notify(101,notification);
 
     }
+    //删除通知
     public void  cancle_nitified(View view){
         NotificationManager notificationManager=(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancel(101);
     }
+    //弹出框设置
     public void alert_dialog(View view){
         final AlertDialog.Builder builder=new AlertDialog.Builder(this);
         //在构造器内设置对话框的属性

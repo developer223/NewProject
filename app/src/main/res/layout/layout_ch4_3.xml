@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/ch4_3_ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-<!--通知-->
-    <Button
+    <CheckBox
         android:layout_width="wrap_content"
-        android:text="notification"
-        android:onClick="notification"
+        android:text="swim"
         android:layout_height="wrap_content" />
-    <Button
+    <CheckBox
         android:layout_width="wrap_content"
-        android:text="cancle_nitified"
-        android:onClick="cancle_nitified"
+        android:text="aaaa"
         android:layout_height="wrap_content" />
-    <Button
+    <CheckBox
         android:layout_width="wrap_content"
-        android:text="alert_dialog"
-        android:onClick="alert_dialog"
+        android:text="bbbb"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/ch4_3_tv"
         android:layout_height="wrap_content" />
 </LinearLayout>

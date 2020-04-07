@@ -1,13 +1,16 @@
 package sn170507180223.classroom.android.sdwu.edu.cn.newproject;
 
 import android.app.WallpaperManager;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.regex.Matcher;
@@ -42,6 +45,19 @@ public class ch4Actity_1 extends AppCompatActivity implements View.OnFocusChange
         });
         EditText email=(EditText) findViewById(R.id.ch4_1_email);//找到事件源
         email.setOnFocusChangeListener(this);//焦点改变事件
+
+        //触摸事件，显示坐标
+        LinearLayout linearLayout=(LinearLayout)findViewById(R.id.ch4_1_ll);
+        linearLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                float x=motionEvent.getX();
+                float y=motionEvent.getY();
+                TextView textView=(TextView) findViewById(R.id.ch4_1_tv);
+                textView.setText("x:"+x+",y:"+y);
+                return true;
+            }
+        });
     }
 
     @Override//上面implements View.OnFocusChangeListener后按照提示输出的
@@ -72,5 +88,13 @@ public class ch4Actity_1 extends AppCompatActivity implements View.OnFocusChange
         public void onClick(View view) {
             Log.i(ch4Actity_1.class.toString(),"button click");
         }
+
+
+    }
+    public void startMain(View view){
+        //界面跳转
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+
     }
 }
