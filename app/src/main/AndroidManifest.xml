@@ -13,15 +13,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".ch4Actity_1" />
-        <activity android:name=".ch4Actity_2"></activity>
-        <activity android:name=".ch4Actity_3"></activity>
-        <activity android:name=".ch5Actity">
-
-        </activity>
-        <activity android:name=".ch5actity_1">
-
-        </activity>
+        <activity android:name=".ch4Actity_2" />
+        <activity android:name=".ch4Actity_3" />
+        <activity android:name=".ch5Actity" />
+        <activity android:name=".ch5actity_1" />
         <activity android:name=".ch6Atity">
+
+        </activity>
+        <activity android:name=".Ch7Actity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

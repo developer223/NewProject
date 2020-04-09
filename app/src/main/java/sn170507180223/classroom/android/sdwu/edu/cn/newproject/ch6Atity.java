@@ -14,6 +14,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
 public class ch6Atity extends AppCompatActivity {
 
     @Override
@@ -48,13 +51,27 @@ public class ch6Atity extends AppCompatActivity {
         int resId=typedArray.getResourceId(0,0);
         imageView.setImageResource(resId);
 
-        String str=typedArray.getString(1);
+        String str=typedArray.getString(0);
         Log.i(ch6Atity.this.toString(),str);
 
         //注册上下文菜单
         LinearLayout linearLayout=(LinearLayout)findViewById(R.id.ch6_1_11);
         registerForContextMenu(linearLayout);
 
+        XmlPullParser xmlPullParser=resources.getXml(R.xml.words);
+        try {
+            while (xmlPullParser.getEventType()!=XmlPullParser.END_DOCUMENT){
+                if(xmlPullParser.getEventType()==XmlPullParser.START_TAG) {
+                    //判断是否为word元素
+                    if (xmlPullParser.getName().equals("word")) {
+                        String word = xmlPullParser.getAttributeName(0);
+                        Log.i(ch6Atity.class.toString(),word);
+                    }
+                }
+            }
+        } catch (XmlPullParserException e) {
+            Log.e(ch6Atity.class.toString(),e.toString());
+        }
     }
 
     @Override

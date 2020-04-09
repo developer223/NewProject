@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <!--ViewGroup子类-->
     <RadioGroup
         android:layout_width="match_parent"
         android:id="@+id/ch4_2_rg"
