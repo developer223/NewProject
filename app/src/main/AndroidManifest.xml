@@ -20,11 +20,13 @@
         <activity android:name=".ch6Atity" />
         <activity android:name=".Ch7Actity" />
         <activity android:name=".ch7Actity_2" />
-        <activity android:name=".ch7Activity_3"></activity>
-        <activity android:name=".ch8Actity_1">
+        <activity android:name=".ch7Activity_3" />
+        <activity android:name=".ch8Actity_1" />
+        <activity android:name=".ch9Actity"></activity>
+        <activity android:name=".ch9Actity_2">
 
         </activity>
-        <activity android:name=".ch9Actity">
+        <activity android:name=".ch8Actity_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
