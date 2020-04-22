@@ -2,7 +2,9 @@ package sn170507180223.classroom.android.sdwu.edu.cn.newproject;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +28,10 @@ public class ch5Actity extends AppCompatActivity {
         builder.setContentTitle("message");
         builder.setWhen(System.currentTimeMillis());
         builder.setSmallIcon(android.R.drawable.ic_input_delete);//引用系统资源
+
+        Intent intent=new Intent(this,ch6Atity.class);//点击通知后跳转的界面
+        PendingIntent pendingIntent=PendingIntent.getActivity(this,101,intent,PendingIntent.FLAG_CANCEL_CURRENT);//代办的Intent
+        builder.setContentIntent(pendingIntent);
         //完成构造
         Notification notification=builder.build();
         //发送
